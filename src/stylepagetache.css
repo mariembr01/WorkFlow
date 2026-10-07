@@ -1,0 +1,533 @@
+.div-pagetache {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.header-tache {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.img-logo {
+    height: 50px;
+    width: auto;
+}
+
+.header-tache h1 {
+    font-size: 1.5rem;
+    color: #331a29;
+    margin: 0;
+    flex: 1;
+}
+
+.nav-tache {
+    grid-area: nav;
+    display: flex;
+    border-right: 1px solid #ddd;
+    padding: 20px;
+    flex-direction: column;
+    gap:10px;
+    height: calc(100vh - 80px);
+    position:sticky;
+    top: 80px;
+    width: 20%;
+}
+
+.main-div{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    width: 100%;
+}
+.contenu-tache {
+    grid-area: article;
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #f4f7f6;
+    
+}
+
+.listes_taches {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Plus large pour l'alignement horizontal */
+    gap: 20px;
+    padding: 20px 0;
+}
+.dark-mode .listes_taches h4{
+    color: white;
+}
+
+.div-task {
+    background: white;
+    border: 1px solid #e0e6ed;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    transition: box-shadow 0.3s ease;
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0;
+    color: #1e293b;
+}
+
+.task-body {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.div-task:hover {
+    box-shadow: 0 8px 15px rgba(0,0,0,0.05);
+}
+.contenu-tache h4 {
+    margin-top: 0;
+}
+
+/* Aligner les select et l'input de recherche sur une ligne */
+.contenu-tache > select, 
+.contenu-tache > .input-search, 
+.contenu-tache > .button-tache {
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+
+.div-pagetache h4 { color: #333; margin-bottom: 1.5rem; }
+
+.div-pagetache input[type="text"], 
+.div-pagetache select {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-right: 10px;
+    outline: none;
+}
+
+.button-tache {
+    background-color: #622f4e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.button-tache:hover { background-color: #943b61; }
+
+.listes_taches {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.div-task {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-left: 5px solid #0085C3;
+}
+
+.div-task{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+}
+
+.action-section{
+    display: flex;
+    gap:10px; /*Espace entre les deux bouttons*/
+}
+
+.button-modifier{
+    background-color: white;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.button-supprimer_1 {
+  background-color: #fff; /* bouton blanc */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 6px 10px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-supprimer_1:hover {
+  background-color: #f8f8f8;
+}
+
+/* icône rouge */
+.icon-supprimer {
+  color: red;
+  font-size: 18px; /* taille de l'icône */
+}
+
+
+
+.button-supprimer{
+    background-color:white;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.button-modifier:hover{
+     background-color: rgb(238, 234, 238);
+}
+.button-supprimer:hover{
+     background-color: rgb(238, 234, 238);
+}
+
+/* Styles de base (Mode Clair) */
+.div-pagetache {
+    background-color: #ffffff;
+    color: #333333;
+    transition: all 0.3s ease; 
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Styles Mode Sombre  */
+.dark-mode {
+    background-color: #1a1a1a; 
+    color: #f4f4f4; 
+}
+
+/* Modifier les cartes de tâches en mode sombre */
+.dark-mode .div-task  {
+    background-color: #2d2d2d;
+    border: 1px solid #444;
+    color: #ffffff;
+}
+
+/* Modifier les inputs et selects en mode sombre */
+.dark-mode input, 
+.dark-mode select {
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+}
+
+.dark-mode h4{
+    color: white;
+}
+
+/* Style du bouton de bascule */
+.button-dark {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    transition: 0.3s;
+}
+
+.button-dark:hover {
+    background-color: rgb(245, 227, 245);
+}
+
+.dark-mode .button-drag-drop{
+    background-color: black;
+    color: white;
+}
+.button-drag-drop:hover{
+     background-color: rgb(238, 234, 238);;
+}
+.dark-mode .header-tache{
+       background-color: black;
+        color: white;
+}
+.dark-mode .contenu-tache{
+       background-color: black;
+        color: white;
+}
+
+.logout-button{
+    color:red;
+}
+
+.logout-button:hover{
+       background-color: rgb(227, 177, 227);
+}
+
+
+button .nav-item :hover{
+       background-color: rgb(227, 177, 227);
+}
+
+.dark-mode .div-drag-drop{
+    background-color: Black;
+    color: white;
+}
+.div-drag-drop{
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    overflow-x:auto;
+    padding:20px 10px ;
+    background-color:#f8fafc;
+    min-height: 80vh;
+}
+
+.div-drag-drop-column h3{
+    font-size: 1.1rem;
+    font-weight: 700;
+    color:#334155;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+}
+
+.dark-mode .div-drag-drop-column h3{
+    background-color: black;
+    color: white;
+}
+.div-provided{
+    background-color: #f1f5f9;
+    border: 2ps dashed #cbd5e1;
+    border-radius: 12px;
+    padding: 15px;
+    min-height: 400px;
+    transition: background-color 0.2s ease;
+}
+
+.dark-mode .div-provided{
+    background-color: black;
+    color: white;
+}
+
+.div-provided-card{
+    background-color: white;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05 );
+    border: 1px solid #e2e8f0;
+}
+.div-provided-card h5{
+    margin: 0 0 8px 0;
+    font-size: 1rem;
+    columns: #1e293b;
+}
+
+.div-provided-card p {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+.dark-mode .div-provided-card{
+    background-color: black;
+    color: white;
+}
+
+.listes_taches {
+    padding: 20px;
+    background-color: #f8fafc;
+    min-height: 100vh;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.dark-mode .listes_taches{
+    background-color: black;
+    color: white;
+}
+
+.listes_taches h4 {
+    margin-bottom: 30px;
+    color: #1e293b;
+    font-size: 1.2rem;
+    text-align: center;
+    width: 100%;
+}
+
+.dark-mode .listes_taches h4{
+    color: white;
+}
+
+.task-card {
+    background: white;
+    border-radius: 12px;
+    padding: 16px 24px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s ease;
+    height: 100px;
+    box-sizing: border-box;
+    width: 100%;
+    
+}
+.dark-mode .task-card{
+    background-color: black;
+    color: white;
+}
+.task-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
+}
+
+.task-content {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    gap:30px;
+}
+.dark-mode .task-content{
+    background-color: black;
+    color: white;
+}
+
+.task-content h5 {
+    margin: 0 0 8px 0;
+    font-size: 1.1rem;
+    color: #0f172a;
+    font-weight: 600;
+}
+
+.dark-mode .task-content h5{
+    color: white;
+}
+
+
+.div-details {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+.div-details p {
+    margin: 0;
+    color: #475569;
+}
+.dark-mode .div-details p{
+    color: white;
+}
+
+.div-prio-tache {
+    padding: 2px 10px;
+    border-radius: 20px;
+    color: white;
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: capitalize;
+}
+.dark-mode .div-prio-tache{
+    color: white;
+}
+
+.div-statut {
+    background: #e2e8f0;
+    color: #475569;
+    padding: 2px 10px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+.dark-mode .div-statut{
+    color: white
+    ;
+}
+.div-date {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #94a3b8;
+}
+
+.task-body {
+    display: flex;
+    gap: 10px;
+}
+
+.button-modifier, .button-supprimer {
+    background: #f1f5f9;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-size: 1.1rem;
+}
+
+
+/* Bouton confirmer - rouge */
+.swal-confirm-btn {
+  background-color: #d33 !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 5px !important;
+  padding: 8px 20px !important;
+  font-weight: bold;
+  cursor: pointer;
+}
+.swal-confirm-btn:hover {
+  background-color: #a00 !important;
+}
+
+/* Bouton annuler - blanc */
+.swal-cancel-btn {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #d3d3d3 !important;
+  border-radius: 5px !important;
+  padding: 8px 20px !important;
+  font-weight: bold;
+  cursor: pointer;
+}
+.swal-cancel-btn:hover {
+  background-color: #f2f2f2 !important;
+}

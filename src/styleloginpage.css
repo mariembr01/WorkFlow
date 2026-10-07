@@ -1,0 +1,109 @@
+.login-body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url('public/img.jpeg') no-repeat center center/cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 40px;
+  width: 350px;
+  height: 300px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  text-align: center;
+}
+h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.label-login {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #eee;
+}
+
+.input-login {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(52, 8, 49, 0.297);
+  color: #fff;
+  outline: none;
+  font-size: 14px;
+}
+
+.input-login::placeholder {
+  color: #ccc;
+}
+
+.button-login {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #49013e;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+
+
+.button-login:hover {
+  background-color: #790762;
+}
+
+
+
+.signup-link {
+  margin-top: 15px;
+  text-align: right;
+}
+
+.signup-link a {
+  font-size: 14px;
+  color: #0f1c38;
+  text-decoration: none;
+  transition: 0.3s;
+  margin-bottom: 5px;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+.signup-button {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #ffffff; /* Couleur normale du texte */
+  text-decoration: none; /* On retire la ligne par défaut */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Transition douce pour l'effet */
+  border-bottom: 2px solid transparent; /* Ligne invisible par défaut */
+}
+
+.signup-button:hover {
+  border-bottom: 2px solid #ffffff; /* Ligne blanche qui apparaît au survol */
+}
